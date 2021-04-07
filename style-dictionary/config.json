@@ -1,9 +1,9 @@
 {
-  "source": ["properties/**/*.json"],
+  "source": ["./style-dictionary/properties/**/*.json"],
   "platforms": {
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "build/scss/",
+      "buildPath": "./style-dictionary/build/scss/",
       "files": [
         {
           "destination": "_variables.scss",
