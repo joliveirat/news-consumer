@@ -2,7 +2,7 @@
   "source": ["./style-dictionary/properties/**/*.json"],
   "platforms": {
     "js": {
-      "transformGroup": "js",
+      "transforms": ["attribute/cti", "name/cti/camel", "color/hex", "size/px"],
       "buildPath": "./src/style/",
       "files": [
         {
