@@ -1,18 +1,18 @@
 /**
  * Do not edit directly
- * Generated on Thu, 08 Apr 2021 22:43:01 GMT
+ * Generated on Thu, 08 Apr 2021 23:14:39 GMT
  */
 
-export const brandColorPrimary1 = "#fef0ec";
-export const brandColorPrimary2 = "#fbd1c6";
+export const brandColorPrimary1 = "#691c07";
+export const brandColorPrimary2 = "#8f260a";
 export const brandColorPrimary3 = "#f04e23";
-export const brandColorPrimary4 = "#8f260a";
-export const brandColorPrimary5 = "#691c07";
-export const neutralColor1 = "#ffffff";
-export const neutralColor2 = "#e4e5e7";
+export const brandColorPrimary4 = "#fbd1c6";
+export const brandColorPrimary5 = "#fef0ec";
+export const neutralColor1 = "#000000";
+export const neutralColor2 = "#70747b";
 export const neutralColor3 = "#a6aaaf";
-export const neutralColor4 = "#70747b";
-export const neutralColor5 = "#000000";
+export const neutralColor4 = "#e4e5e7";
+export const neutralColor5 = "#ffffff";
 export const fontFamilyHighlight = "'Archivo'";
 export const fontWeightBold = "700";
 export const fontWeightMedium = "600";
