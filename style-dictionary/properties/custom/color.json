@@ -3,11 +3,11 @@
     "color": {
       "primary": {
         "1": {
-          "value": "#FEF0EC",
+          "value": "#691C07",
           "attributes": { "category": "color", "type": "brand" }
         },
         "2": {
-          "value": "#FBD1C6",
+          "value": "#8F260A",
           "attributes": { "category": "color", "type": "brand" }
         },
         "3": {
@@ -15,11 +15,11 @@
           "attributes": { "category": "color", "type": "brand" }
         },
         "4": {
-          "value": "#8F260A",
+          "value": "#FBD1C6",
           "attributes": { "category": "color", "type": "brand" }
         },
         "5": {
-          "value": "#691C07",
+          "value": "#FEF0EC",
           "attributes": { "category": "color", "type": "brand" }
         }
       }
@@ -28,11 +28,11 @@
   "neutral": {
     "color": {
       "1": {
-        "value": "#ffffff",
+        "value": "#000000",
         "attributes": { "category": "color", "type": "neutral" }
       },
       "2": {
-        "value": "#E4E5E7",
+        "value": "#70747B",
         "attributes": { "category": "color", "type": "neutral" }
       },
       "3": {
@@ -40,11 +40,11 @@
         "attributes": { "category": "color", "type": "neutral" }
       },
       "4": {
-        "value": "#70747B",
+        "value": "#E4E5E7",
         "attributes": { "category": "color", "type": "neutral" }
       },
       "5": {
-        "value": "#000000",
+        "value": "#ffffff",
         "attributes": { "category": "color", "type": "neutral" }
       }
     }
