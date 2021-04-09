@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import * as style from "./Subtitle.style";
 
-const Subtitle = ({ element, children, size }) => (
-  <style.Subtitle as={element} size={size}>
+const Subtitle = ({ children, className, element, size }) => (
+  <style.Subtitle as={element} size={size} className={className}>
     {children}
   </style.Subtitle>
 );
@@ -21,6 +21,7 @@ Subtitle.propTypes = {
   ]),
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   size: PropTypes.oneOf(["large", "medium", "small"]),
+  className: PropTypes.string,
 };
 
 Subtitle.defaultProps = {

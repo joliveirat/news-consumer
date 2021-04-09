@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import * as style from "./Shape.style";
 
-const Shape = ({ element, children }) => (
-  <style.Shape as={element}>{children}</style.Shape>
+const Shape = ({ children, className, element }) => (
+  <style.Shape as={element} className={className}>
+    {children}
+  </style.Shape>
 );
 
 Shape.propTypes = {
@@ -17,6 +19,7 @@ Shape.propTypes = {
     "aside",
     "nav",
   ]),
+  className: PropTypes.string,
 };
 
 Shape.defaultProps = {
