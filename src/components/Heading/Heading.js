@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import * as style from "./Heading.styles";
+import * as style from "./Heading.style";
 
 const Heading = ({ children, className, size, type }) => (
   <style.Heading as={type} size={size} className={className}>
