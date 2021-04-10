@@ -1,13 +1,10 @@
-import Heading from "../Heading";
-import CardContent from "../CardContent";
-
-import { GlobalStyle } from "./App.styles";
+import { GlobalStyle } from "./App.style";
+import HomePage from "../../pages/home";
 
 const App = () => (
   <>
     <GlobalStyle />
-    <Heading>News Consumer</Heading>
-    <CardContent />
+    <HomePage />
   </>
 );
 
