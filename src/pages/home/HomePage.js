@@ -3,6 +3,7 @@ import CardContent from "../../components/CardContent";
 import { getHeadlines } from "../../services/news";
 import * as style from "./HomePage.style";
 import Loading from "../../components/Loading";
+import { formatDateToLocaleFromISO } from "../../utils/date";
 
 const HomePage = () => {
   const [headlines, setHeadlines] = useState([]);
@@ -11,7 +12,6 @@ const HomePage = () => {
   useEffect(() => {
     async function fetchHeadlines() {
       const headlines = await getHeadlines();
-      console.log(headlines);
       setHeadlines(headlines);
       setRequestStatus("done");
     }
@@ -29,7 +29,10 @@ const HomePage = () => {
             <CardContent
               key={key}
               title={title}
-              subtitle={`Publicado em ${publishedAt}`}
+              subtitle={`Publicado em ${formatDateToLocaleFromISO(
+                publishedAt,
+                "pt-BR"
+              )}`}
               paragraph={description}
               buttonElement="a"
               buttonHref={url}
