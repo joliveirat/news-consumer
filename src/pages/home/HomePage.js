@@ -1,0 +1,49 @@
+import { useState, useEffect } from "react";
+import CardContent from "../../components/CardContent";
+import { getHeadlines } from "../../services/news";
+import * as style from "./HomePage.style";
+import Loading from "../../components/Loading";
+import { formatDateToLocaleFromISO } from "../../utils/date";
+
+const HomePage = () => {
+  const [headlines, setHeadlines] = useState([]);
+  const [requestStatus, setRequestStatus] = useState("pending");
+
+  useEffect(() => {
+    async function fetchHeadlines() {
+      const headlines = await getHeadlines();
+      setHeadlines(headlines);
+      setRequestStatus("done");
+    }
+    fetchHeadlines();
+  }, []);
+
+  return (
+    <style.PageContainer>
+      <style.Heading>News Consumer</style.Heading>
+      {requestStatus === "pending" ? (
+        <Loading text="Carregando notícias" />
+      ) : (
+        <style.Content>
+          {headlines.map(({ title, url, description, publishedAt }, key) => (
+            <CardContent
+              key={key}
+              title={title}
+              subtitle={`Publicado em ${formatDateToLocaleFromISO(
+                publishedAt,
+                "pt-BR"
+              )}`}
+              paragraph={description}
+              buttonElement="a"
+              buttonHref={url}
+              buttonLabel="Ir para a notícia"
+              buttonTarget="_blank"
+            />
+          ))}
+        </style.Content>
+      )}
+    </style.PageContainer>
+  );
+};
+
+export default HomePage;

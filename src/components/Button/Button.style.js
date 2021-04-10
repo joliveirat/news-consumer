@@ -2,6 +2,7 @@ import styled from "styled-components";
 import * as tokens from "../../style/variables";
 
 export const Button = styled.button`
+  text-decoration: none;
   border: none;
   font-size: ${tokens.fontSizeSm};
   font-family: ${tokens.fontFamilyHighlight};

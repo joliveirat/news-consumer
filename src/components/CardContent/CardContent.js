@@ -1,21 +1,31 @@
 import Button from "../Button";
 import Shape from "../Shape";
-import { Heading, Subtitle, Paragraph } from "./CardContent.styles";
+import { Heading, Subtitle, Paragraph } from "./CardContent.style";
 
-const CardContent = () => (
-  <Shape>
-    <Heading type="h4">News Consumer</Heading>
-    <Subtitle>Subtitle</Subtitle>
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et mollis
-      nisl, finibus vestibulum tellus. Nulla volutpat ac tellus et sodales.
-      Donec vel interdum massa. Phasellus mollis eros a porta laoreet. Orci
-      varius natoque penatibus et magnis dis parturient montes, nascetur
-      ridiculus mus. Integer placerat venenatis ultricies. Suspendisse sed
-      ligula nunc. Sed feugiat faucibus iaculis. Suspendisse sagittis blandit
-      justo, ac tempor nibh imperdiet in.
-    </Paragraph>
-    <Button color="primary">Button</Button>
+const CardContent = ({
+  title,
+  subtitle,
+  paragraph,
+  buttonLabel,
+  buttonElement,
+  buttonHref,
+  buttonTarget,
+  onClickButton,
+  className,
+}) => (
+  <Shape element="article" className={className}>
+    <Heading type="h1">{title}</Heading>
+    <Subtitle>{subtitle}</Subtitle>
+    <Paragraph>{paragraph}</Paragraph>
+    <Button
+      color="primary"
+      element={buttonElement}
+      href={buttonHref}
+      target={buttonTarget}
+      onClick={onClickButton}
+    >
+      {buttonLabel}
+    </Button>
   </Shape>
 );
 
