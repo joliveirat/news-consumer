@@ -5,7 +5,9 @@ export const NEWS_API_KEY = env
   .required()
   .asString();
 
-export const NEWS_SOURCES = env
-  .get("REACT_APP_GOOGLE_NEWS_SOURCES")
+export const NEWS_SOURCES = "google-news-br";
+
+export const NEWS_API_URL = env
+  .get("REACT_APP_GOOGLE_NEWS_API_URL")
   .required()
   .asString();
