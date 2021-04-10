@@ -1,9 +1,7 @@
-import createClient from "../../utils/http-client";
-import { NEWS_API_KEY, NEWS_SOURCES } from "../../utils/config";
+import createHTTPClient from "../../utils/http-client";
+import { NEWS_API_URL, NEWS_API_KEY, NEWS_SOURCES } from "../../utils/config";
 
-const baseUrl = "https://newsapi.org/v2/";
-
-const client = createClient(baseUrl);
+const client = createHTTPClient({ baseURL: NEWS_API_URL });
 
 export const getHeadlines = () =>
   client

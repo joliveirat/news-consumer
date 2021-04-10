@@ -1,8 +1,5 @@
 import axios from "axios";
 
-const createClient = (baseURL) =>
-  axios.create({
-    baseURL,
-  });
+const createHTTPClient = (config) => axios.create(config);
 
-export default createClient;
+export default createHTTPClient;
