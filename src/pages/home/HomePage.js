@@ -30,8 +30,10 @@ const HomePage = () => {
               title={title}
               subtitle={`Publicado em ${publishedAt}`}
               paragraph={description}
+              buttonElement="a"
+              buttonHref={url}
               buttonLabel="Ir para a notícia"
-              onClickButton={() => window.open(url)}
+              buttonTarget="_blank"
             />
           ))
         )}
