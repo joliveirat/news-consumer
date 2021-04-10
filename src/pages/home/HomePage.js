@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CardContent from "../../components/CardContent";
 import { getHeadlines } from "../../services/news";
 import * as style from "./HomePage.style";
+import Loading from "../../components/Loading";
 
 const HomePage = () => {
   const [headlines, setHeadlines] = useState([]);
@@ -20,11 +21,11 @@ const HomePage = () => {
   return (
     <style.PageContainer>
       <style.Heading>News Consumer</style.Heading>
-      <style.Content>
-        {requestStatus === "pending" ? (
-          <>Loading</>
-        ) : (
-          headlines.map(({ title, url, description, publishedAt }, key) => (
+      {requestStatus === "pending" ? (
+        <Loading text="Carregando notícias" />
+      ) : (
+        <style.Content>
+          {headlines.map(({ title, url, description, publishedAt }, key) => (
             <CardContent
               key={key}
               title={title}
@@ -35,9 +36,9 @@ const HomePage = () => {
               buttonLabel="Ir para a notícia"
               buttonTarget="_blank"
             />
-          ))
-        )}
-      </style.Content>
+          ))}
+        </style.Content>
+      )}
     </style.PageContainer>
   );
 };
