@@ -12,7 +12,7 @@ const HomePage = () => {
       const headlines = await getHeadlines();
       console.log(headlines);
       setHeadlines(headlines);
-      //setRequestStatus("done");
+      setRequestStatus("done");
     }
     fetchHeadlines();
   }, []);
@@ -20,20 +20,22 @@ const HomePage = () => {
   return (
     <style.PageContainer>
       <style.Heading>News Consumer</style.Heading>
-      {requestStatus === "pending" ? (
-        <>Loading</>
-      ) : (
-        headlines.map(({ title, url, description, publishedAt }, key) => (
-          <CardContent
-            key={key}
-            title={title}
-            subtitle={`Publicado em ${publishedAt}`}
-            paragraph={description}
-            buttonLabel="Ir para a notícia"
-            onClickButton={() => window.open(url)}
-          ></CardContent>
-        ))
-      )}
+      <style.Content>
+        {requestStatus === "pending" ? (
+          <>Loading</>
+        ) : (
+          headlines.map(({ title, url, description, publishedAt }, key) => (
+            <CardContent
+              key={key}
+              title={title}
+              subtitle={`Publicado em ${publishedAt}`}
+              paragraph={description}
+              buttonLabel="Ir para a notícia"
+              onClickButton={() => window.open(url)}
+            />
+          ))
+        )}
+      </style.Content>
     </style.PageContainer>
   );
 };

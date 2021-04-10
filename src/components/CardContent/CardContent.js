@@ -8,8 +8,9 @@ const CardContent = ({
   paragraph,
   buttonLabel,
   onClickButton,
+  className,
 }) => (
-  <Shape element="article">
+  <Shape element="article" className={className}>
     <Heading type="h1">{title}</Heading>
     <Subtitle>{subtitle}</Subtitle>
     <Paragraph>{paragraph}</Paragraph>
