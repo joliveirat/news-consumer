@@ -16,7 +16,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run build:style`
 
-Builds Style Dictionary files according to `/style-dictionary/config.json`.
+Builds Style Dictionary files according to `/style-dictionary/config.json`.\
+You should run that if you change any file on `/style-dictionary/properties` folder, which contains all design tokens.
 
 ### `npm run build`
 
@@ -25,5 +26,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-##
