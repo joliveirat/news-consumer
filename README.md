@@ -12,7 +12,10 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.\
+
+_Don't forget to run `cp .env.example .env`_\
+You'll need to [generate a Google News API key](https://newsapi.org/s/google-news-br-api)
 
 ### `npm run build:style`
 
